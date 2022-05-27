@@ -32,7 +32,7 @@ def division_lenta(dividendo,divisor):
     elif auxiliar_dos < 0 and auxiliar_uno > 0:
         cociente = (cociente) * -1
     elif auxiliar_uno < 0 and auxiliar_dos < 0:
-        cociente = cociente
+        dividendo = dividendo * -1
     return(cociente,dividendo)
 
 
