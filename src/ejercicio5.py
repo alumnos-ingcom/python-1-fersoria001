@@ -12,6 +12,8 @@ def division_lenta(dividendo,divisor):
     Esta funcion se encarga de realizar una división entera restando el
     divisor al dividendo hasta que dividendo > divisor. También
     nos devolverá el resto de la operacion.
+    Los signos se obtienen por el lema de la division: Siendo a,b Enteros y a != 0
+    existen {c y r | b= a.c + r con 0<=r<|a|}
     Precondiciones: Tanto dividendo como divisor, deben ser numeros Reales.
     Postcondicion : La salida devuelve una tupla formada por el cociente y el resto.
     """
