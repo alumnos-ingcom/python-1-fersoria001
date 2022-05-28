@@ -15,24 +15,27 @@ def division_lenta(dividendo,divisor):
     Precondiciones: Tanto dividendo como divisor, deben ser numeros Reales.
     Postcondicion : La salida devuelve una tupla formada por el cociente y el resto.
     """
-    auxiliar_uno = divisor
-    auxiliar_dos = dividendo
+    auxiliar_dos = divisor
+    auxiliar_uno = dividendo
     cociente = 0
     if divisor < 0:
-        auxiliar_uno = divisor
+        auxiliar_dos = divisor
         divisor = (divisor) * -1
     if dividendo < 0:
-        auxiliar_dos = dividendo
-        dividendo = (dividendo) * -1
+        auxiliar_uno = dividendo
+        dividendo = dividendo * -1
     while dividendo >= divisor:
         dividendo = dividendo - divisor
         cociente = cociente + 1
-    if auxiliar_dos > 0 and auxiliar_uno < 0:
+    if auxiliar_uno > 0 and auxiliar_dos < 0:
         cociente = (cociente) * -1
-    elif auxiliar_dos < 0 and auxiliar_uno > 0:
-        cociente = (cociente) * -1
-    elif auxiliar_uno < 0 and auxiliar_dos < 0:
-        dividendo = dividendo * -1
+    elif auxiliar_uno < 0 and auxiliar_dos > 0:
+        cambio_signo = (cociente *-1), (dividendo *-1)
+        dividendo = (auxiliar_dos) + (cambio_signo[1])
+        cociente = (cambio_signo[0]) + -1
+    elif auxiliar_dos < 0 and auxiliar_uno < 0:
+        cociente = cociente + 1
+        dividendo = divisor + (dividendo * -1)
     return(cociente,dividendo)
 
 
