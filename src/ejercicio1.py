@@ -17,6 +17,7 @@ def convertir_a_fahrenheit(centigrados):
     Postcondiciones: "salida" devolvera un numero entero o con decimales.
     """
     fahrenheit = (centigrados * 1.8) + 32
+    
     return fahrenheit
 
 

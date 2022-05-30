@@ -20,11 +20,11 @@ def comparacion_de_numeros(numero,otro_numero):
     resta = numero - otro_numero
     suma = otro_numero + (numero * -1)
     if resta > suma:
-        salida = "1"
+        salida = 1
     elif suma > resta:
-        salida = "-1"
+        salida = -1
     elif resta == 0:
-        salida = "0"
+        salida = 0
     return salida
 
 
@@ -33,8 +33,8 @@ def principal():
     Esta función es la que se encarga de la parte 'interactiva' del ejercicio
     (La entrada, la llamada al algoritmo y la salida)
     """
-    numero = int(input(" Ingrese un numero: "))
-    otro_numero = int(input("Ingrese otro numero: "))
+    numero = float(input(" Ingrese un numero: "))
+    otro_numero = float(input("Ingrese otro numero: "))
     comp = comparacion_de_numeros(numero
                                   ,otro_numero)
     print(f" {comp}")
