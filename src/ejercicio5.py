@@ -28,16 +28,16 @@ def division_lenta(dividendo,divisor):
         dividendo = dividendo - divisor
         cociente = cociente + 1
     if auxiliar_uno > 0 and auxiliar_dos < 0:
-        cambio_signo = (cociente *-1), (dividendo *-1)
-        dividendo = (auxiliar_dos) - (cambio_signo[1])
-        cociente = (cambio_signo[0]) + -1
+        cambio_signo = cociente *-1, dividendo *-1
+        dividendo = auxiliar_dos - cambio_signo[1]
+        cociente = cambio_signo[0] + -1
     elif auxiliar_uno < 0 and auxiliar_dos > 0:
-        cambio_signo = (cociente *-1), (dividendo *-1)
-        dividendo = (auxiliar_dos) + (cambio_signo[1])
-        cociente = (cambio_signo[0]) + -1
+        cambio_signo = cociente *-1, dividendo *-1
+        dividendo = auxiliar_dos + cambio_signo[1]
+        cociente = cambio_signo[0] + -1
     elif auxiliar_dos < 0 and auxiliar_uno < 0:
         dividendo = dividendo * -1
-    return(cociente,dividendo)
+    return cociente, dividendo
 
 
 def principal():

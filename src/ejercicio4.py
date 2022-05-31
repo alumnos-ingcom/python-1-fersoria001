@@ -14,17 +14,18 @@ def suma_lenta(numero, otro_numero):
     """
     Esta función se encarga de sumar a un numero , otro numero de 1 en
     1.
-    Precondiciones = Ingresar un numero entero.
-    Postcondiciones = Se retornara un numero entero.
+    Precondiciones = Ingresar dos numeros enteros independientes.
+    Postcondiciones = Se retornara un numero entero, que es
+    igual a la suma de ambos numeros ingresados.
     """
     if otro_numero >= 0:
         while otro_numero > 0:
-            numero = (numero) + 1
-            otro_numero = (otro_numero) - 1
+            numero = numero + 1
+            otro_numero = otro_numero - 1
     elif otro_numero <= 0:
         while otro_numero < 0:
-            numero = (numero) - 1
-            otro_numero = (otro_numero) + 1
+            numero = numero - 1
+            otro_numero = otro_numero + 1
     return numero
 
 

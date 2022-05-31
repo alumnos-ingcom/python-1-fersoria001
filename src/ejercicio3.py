@@ -14,7 +14,7 @@ Escribir una función que utilizando sumas y restas
 def comparacion_de_numeros(numero,otro_numero):
     """ Esta funcion compara dos numeros mediante
     el uso de sumas y restas  y devuelve un valor:
-    Precondiciones: Ingresar una tupla de dos numeros.
+    Precondiciones: Ingresar dos valores independientes.
     Postcondiciones: Devuelve un valor entre -1 y 1.
     """
     resta = numero - otro_numero
@@ -35,8 +35,7 @@ def principal():
     """
     numero = float(input(" Ingrese un numero: "))
     otro_numero = float(input("Ingrese otro numero: "))
-    comp = comparacion_de_numeros(numero
-                                  ,otro_numero)
+    comp = comparacion_de_numeros(numero, otro_numero)
     print(f" {comp}")
 
 if __name__ == "__main__":

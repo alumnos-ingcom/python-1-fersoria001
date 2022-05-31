@@ -18,14 +18,14 @@ def factores_primos(numero):
     primos del numero.
     """
     contador = 2
-    factores = ()
+    factores = []
     while numero > 1:
         if numero % contador == 0:
-            factores = factores + (contador,)
+            factores.append(contador)
             numero = numero / contador
         else:
             contador = contador + 1
-    return factores
+    return tuple(factores)
 
 
 def principal():
