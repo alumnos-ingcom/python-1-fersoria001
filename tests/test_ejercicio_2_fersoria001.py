@@ -8,7 +8,7 @@ en el ejercicio2 que debe indicar con palabras el signo de un numero
 ################
 import pytest
 
-from src.ejercicio2 import signo
+from src.ejercicio2 import signo as signos
 
 
 def test_signo_positivo():
@@ -16,9 +16,9 @@ def test_signo_positivo():
     ejercicio2 con un valor positivo.
     """
     numero_pos = 10
-    signo_pos = signo(numero_pos)
-    assert isinstance(signo_pos, str), "se debe devolver una cadena de texto"
-    assert signo_pos == "positivo", "el numero es positivo"
+    signo_pos = signos(numero_pos)
+    assert isinstance(signo_pos, int), "se debe devolver un valor int"
+    assert signo_pos == 1, "el numero es positivo"
 
 
 
@@ -26,10 +26,10 @@ def test_signo_negativo():
     """ Esta funcion se encarga de testear la funcion signo del
     ejercicio2 con un valor negativo.
     """
-    numero_neg = -1.5
-    signo_neg = signo(numero_neg)
-    assert isinstance(signo_neg, str), "se debe devolver una cadena de texto"
-    assert signo_neg == "es negativo", "el numero es negativo"
+    numero_neg = -21.53
+    signo_neg = signos(numero_neg)
+    assert isinstance(signo_neg, int), "se debe devolver un valor int"
+    assert signo_neg == -1, "el numero es negativo"
 
 
 def test_signo_cero():
@@ -37,6 +37,6 @@ def test_signo_cero():
     ejercicio2 con un igual a cero.
     """
     numero_cero = 0
-    signo_cero = signo(numero_cero)
-    assert isinstance(signo_cero, str), "se debe devolver una cadena de texto"
-    assert signo_cero == "es cero", "el numero ingresado es cero"
+    signo_cero = signos(numero_cero)
+    assert isinstance(signo_cero, int), "se debe devolver un valor int"
+    assert signo_cero == 0, "el numero ingresado es cero"

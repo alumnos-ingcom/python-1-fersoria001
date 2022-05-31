@@ -12,16 +12,17 @@ def signo(numero):
     """ Esta funcion se encarga de reconocer el signo de un numero
     mediante sumas y restas.
     Precondiciones = ingresar un numero
-    Postcondiciones = se devuelve el signo de el numero ingresado
+    Postcondiciones = se devuelve -1 si es negativo, 1 si es positivo
+    y 0 si es cero
     """
     suma = numero + numero
     resta = numero - numero
     if suma > numero:
-        signos = "positivo"
+        signos = 1
     elif resta > numero:
-        signos = "es negativo"
+        signos = -1
     else:
-        signos = "es cero"
+        signos = 0
     return signos
 
 
