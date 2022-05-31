@@ -22,4 +22,15 @@ def test_es_primo():
     assert numero%5 != 0 and resultado is True, "Resultado incorrecto"
     assert numero%7 != 0 and resultado is True, "Resultado incorrecto"
     assert resultado is True, "Resultado incorrecto"
-    
+
+
+def test_es_primo_no():
+    """ Esta funcion se encarga de testear la funcion que indica
+    si un numero es primo o no en el ejercicio8 con valor negativo
+    """
+    numero = 36
+    resultado = es_primo(numero)
+    assert isinstance(resultado, bool), "El resultado debe ser True o False"
+    assert numero%2 == 0 and resultado is False, "Resultado incorrecto"
+    assert numero%3 == 0 and resultado is False, "Resultado incorrecto"
+    assert resultado is False, "Resultado incorrecto"
