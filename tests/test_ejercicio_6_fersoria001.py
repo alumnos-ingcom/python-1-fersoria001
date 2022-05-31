@@ -9,6 +9,19 @@ en el ejercicio6
 import pytest
 from src.ejercicio6 import ordenar_mayor_a_menor, ordenar_menor_a_mayor
 
+def test_ordenar_mayor_a_menor_cero():
+    """ Esta funcion se encarga de testear ordenar de mayor a menor del
+    ejercicio6.
+    """
+    uno = 0
+    dos = 1
+    tres = 0
+    grupo = (uno, dos, tres)
+    tupla = tuple(sorted(grupo, reverse=True))
+    descendente = ordenar_mayor_a_menor(uno, dos, tres)
+    assert isinstance(descendente, tuple), "Se debe retornar una tupla"
+    assert descendente == tupla,  "resultado incorrecto"
+
 
 def test_ordenar_mayor_a_menor_uno():
     """ Esta funcion se encarga de testear ordenar de mayor a menor del
@@ -190,4 +203,17 @@ def test_ordenar_menor_a_mayor_seis():
     ascendente = ordenar_menor_a_mayor(uno, dos, tres)
     assert isinstance(ascendente, tuple), "Se debe retornar una tupla"
     assert ascendente == tupla, "Resultado incorrecto"
-    
+
+
+def test_ordenar_menor_a_mayor_cero():
+    """ Esta funcion se encarga de testear convertir a centigrados del
+    ejercicio2.
+    """
+    uno = 0
+    dos = 1
+    tres = 0
+    grupo = (uno, dos, tres)
+    tupla = tuple(sorted(grupo))
+    ascendente = ordenar_menor_a_mayor(uno, dos, tres)
+    assert isinstance(ascendente, tuple), "Se debe retornar una tupla"
+    assert ascendente == tupla, "Resultado incorrecto"
