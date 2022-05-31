@@ -28,3 +28,12 @@ def test_es_palindromo_no():
     resultado = es_palindromo(texto)
     assert isinstance(resultado, bool), "el resultado debe ser de tipo bool"
     assert resultado is False, "Resultado incorrecto"
+
+def test_es_palindromo_tildes_puntuacion():
+    """ Esta funcion se encarga de testear la funcion de comprobacion
+    de palindromos con valor False
+    """
+    texto = "No subas, abusón"
+    resultado = es_palindromo(texto)
+    assert isinstance(resultado, bool), "el resultado debe ser de tipo bool"
+    assert resultado is True, "Resultado incorrecto"
