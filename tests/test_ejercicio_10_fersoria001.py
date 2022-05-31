@@ -17,7 +17,7 @@ def test_es_palindromo_si():
     texto = "Dabale arroz a la Zorra el Abad"
     resultado = es_palindromo(texto)
     assert isinstance(resultado, bool), "el resultado debe ser de tipo bool"
-    assert resultado == True, "Resultado incorrecto2"
+    assert resultado is True, "Resultado incorrecto2"
 
 
 def test_es_palindromo_no():
@@ -27,4 +27,4 @@ def test_es_palindromo_no():
     texto = "aQuel Codigo esta mal"
     resultado = es_palindromo(texto)
     assert isinstance(resultado, bool), "el resultado debe ser de tipo bool"
-    assert resultado == False, "Resultado incorrecto"
+    assert resultado is False, "Resultado incorrecto"
