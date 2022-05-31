@@ -17,11 +17,15 @@ def es_palindromo(texto):
      Precondiciones = Ingresar un identificador entre ""
      Postcondiciones = Se retorna un valor booleano.
      """
-    if texto == texto[::-1]:
-        palindromo = True
-    else:
-        palindromo = False
+    auxiliar = texto
+    al_reves = []
+    for i in range(len(auxiliar)-1, -1, -1):
+        car = auxiliar[i]
+        lista = al_reves.append(car)
+    palabra = ''.join(al_reves)
+    palindromo = palabra == auxiliar
     return palindromo
+
 
 def principal():
     """
