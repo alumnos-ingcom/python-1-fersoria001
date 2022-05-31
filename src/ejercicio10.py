@@ -17,6 +17,8 @@ def es_palindromo(texto):
      Precondiciones = Ingresar un identificador entre ""
      Postcondiciones = Se retorna un valor booleano.
      """
+    texto = texto.replace(" ", "")
+    texto = texto.lower()
     auxiliar = texto
     al_reves = []
     for i in range(len(auxiliar)-1, -1, -1):
