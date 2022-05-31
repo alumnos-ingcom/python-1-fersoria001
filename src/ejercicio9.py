@@ -8,7 +8,6 @@
 Escribir una función que retorne una `tuple` con factores primos
 de un numero entero positivo.
 """
-from ejercicio8 import es_primo as prime
 
 
 def factores_primos(numero):
@@ -22,10 +21,8 @@ def factores_primos(numero):
     factores = ()
     while numero > 1:
         if numero % contador == 0:
-            primo = prime(contador)
-            if primo is True:
-                factores = factores + (contador,)
-                numero = numero / contador
+            factores = factores + (contador,)
+            numero = numero / contador
         else:
             contador = contador + 1
     return factores
