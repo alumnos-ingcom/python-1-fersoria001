@@ -20,5 +20,3 @@ def test_factores_primos():
     assert resultado[0] == 2,"El numero es divisible por dos"
     assert resultado[3]%2 != 0, "El factor no es primo"
     assert resultado == (2, 2, 3, 3), "Resultado incorrecto"
-    
-    
