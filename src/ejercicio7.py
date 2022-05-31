@@ -1,6 +1,6 @@
 ################
 # Nombre - @fersoria001
-# UNRN Andina - Introducción a la Ingenieria en Computación
+# UNRN Andina - floatroducción a la Ingenieria en Computación
 ################
 
 """
@@ -16,14 +16,12 @@ def sexadecimal_a_decimal(horas,minutos,segundos):
     Precondiciones: Ingrese tres numeros enteros.
     Postcondiciones : Se devuelve un numero expresado en segundos
     """
-    segundo = 0
-    while horas > 0:
-        horas = horas -1
-        minutos = minutos + 60
-    while minutos > 0:
-        minutos = minutos -1
-        segundo = segundo + 60
-    segundos = segundos + segundo
+    if horas > 0:
+        horas = horas  * 60
+        minutos = minutos + horas
+    if minutos > 0:
+        minutos = minutos * 60
+        segundos = segundos + minutos
     return segundos
 
 
@@ -41,17 +39,17 @@ def decimal_a_sexadecimal(numero):
     while minutos > 59:
         horas = horas + 1
         minutos = minutos - 60
-    return horas, "horas", minutos, "minutos", numero, 'segundos'
+    return horas, minutos, numero
 
 def principal():
     """
-    Esta función es la que se encarga de la parte 'interactiva' del
+    Esta función es la que se encarga de la parte 'floateractiva' del
     ejercicio(La entrada, la llamada al algoritmo y la salida)
     """
-    horas = int(input("Ingrese las horas: "))
-    minutos = int(input("Ingrese los minutos: "))
-    segundos = int(input("Ingrese los segundos: "))
-    numero = int(input("Ingrese un numero: "))
+    horas = float(input("Ingrese las horas: "))
+    minutos = float(input("Ingrese los minutos: "))
+    segundos = float(input("Ingrese los segundos: "))
+    numero = float(input("Ingrese un numero: "))
     convert = sexadecimal_a_decimal(horas,minutos,segundos)
     convierta = decimal_a_sexadecimal(numero)
     print(f" {horas} ° {minutos} ' {segundos} \" son {convert} segundos")
