@@ -22,7 +22,7 @@ def test_sexadecimal_a_decimal():
     assert isinstance(resultado, int), "El resultado debe ser un numero entero"
     assert resultado > (horas+minutos+segundos), "El resultado es erroneo"
     assert resultado > 14400, "El resultado es erroneo"
-    
+
 
 
 def test_decimal_a_sexadesimal():
@@ -35,3 +35,4 @@ def test_decimal_a_sexadesimal():
     assert isinstance(resultado, tuple), "El resultado debe ser una tupla"
     assert resultado[0] >= 4, "La equivalencia es igual o mayor a 4 horas"
     assert resultado == (4, 15, 35), "El resultado es incorrecto"
+    
