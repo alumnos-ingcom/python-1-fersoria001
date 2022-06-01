@@ -12,13 +12,22 @@ de derecha a izquierda que de izquierda a derecha.
 
 
 def es_palindromo(texto):
-    """ Esta funcion invierte el indice de la cadena y resuelve si
-     es igual al derecho que al revés.
+    """ Esta funcion invierte el indice de la cadena,la limpia
+    de caracteres especiales y resuelve si es igual al derecho
+    que al revés.
      Precondiciones = Ingresar un identificador entre ""
      Postcondiciones = Se retorna un valor booleano.
      """
     texto = texto.replace(" ", "")
     texto = texto.lower()
+    texto = texto.replace("á", "a")
+    texto = texto.replace("é", "e")
+    texto = texto.replace("í", "i")
+    texto = texto.replace("ó", "o")
+    texto = texto.replace("ú", "u")
+    texto = texto.replace(",", "")
+    texto = texto.replace(".", "")
+    texto = texto.replace(":", "")
     auxiliar = texto
     al_reves = []
     for i in range(len(auxiliar)-1, -1, -1):
