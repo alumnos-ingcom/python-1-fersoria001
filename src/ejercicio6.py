@@ -15,38 +15,67 @@ def ordenar_mayor_a_menor(uno,dos,tres):
     Postcondiciones: Se devuelve una tupla con los valores ordenados de mayor
     a menor.
     """
-    if uno > dos > tres:
-        tupla = (uno, dos, tres)
-    elif uno > tres > dos:
-        tupla = (uno, tres, dos)
-    elif dos > uno > tres:
-        tupla = (dos, uno, tres)
-    elif dos > tres > uno:
-        tupla = (dos, tres, uno)
-    elif tres > uno > dos:
-        tupla = (tres, uno, dos)
+    lista = [uno,dos,tres]
+    if uno > dos and uno > tres:
+        lista[0] = uno
+        if dos > tres:
+            lista[1] = dos
+            lista [2] = tres
+        else:
+            lista[1] = tres
+            lista [2] = dos
     else:
-        tupla = (tres, dos, uno)
+        if dos > tres:
+            lista[0] = dos
+            if uno > tres:
+                lista[1] = uno
+                lista[2] = tres
+            else:
+                lista[1] = tres
+                lista[2] = uno
+        else:
+            lista[0] = tres
+            if dos > uno:
+                lista[1] = dos
+                lista[2] = uno
+            else:
+                lista[1] = uno
+                lista[2] = dos
+    tupla = tuple(lista)
     return tupla
-
 
 def ordenar_menor_a_mayor(uno,dos,tres):
     """ Esta funcion ordena tres numeros ingresados de menor a mayor
     Precondiciones: Ingresar tres numeros.
     Postcondiciones: Se devuelve una tupla ordenada de menor a mayor
     """
-    if  uno < dos < tres:
-        tupla = (uno, dos, tres)
-    elif uno < tres < dos:
-        tupla = (uno, tres, dos)
-    elif dos < uno < tres:
-        tupla = (dos, uno, tres)
-    elif dos < tres < uno:
-        tupla = (dos, tres, uno)
-    elif tres < uno < dos:
-        tupla = (tres, uno, dos)
+    lista = [1,2,3]
+    if uno < dos and uno < tres:
+        lista[0] = uno
+        if dos < tres:
+            lista[1] = dos
+            lista [2] = tres
+        else:
+            lista[1] = tres
+            lista [2] = dos
     else:
-        tupla = (tres, dos, uno)
+        if dos < tres:
+            lista[0] = dos
+            if uno < tres:
+                lista[1] = uno
+                lista[2] = tres
+            else:
+                lista[1] = tres
+                lista[2] = uno
+        else:
+            lista[0] = tres
+            if dos < uno:
+                lista[1] = dos
+                lista[2] = uno
+            else:
+                lista[1] = uno
+                lista[2] = dos
+    tupla = tuple(lista)
     return tupla
 
 
